@@ -12,12 +12,16 @@
   },
   "scripts": {
     "build": "npx node-sass css/main.scss css/main.css --include-path node_modules/",
-    "start": "bundle exec jekyll serve"
+    "start": "bundle exec jekyll serve",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
     "bootstrap": "^4.2.1",
-    "node-sass": "^4.12.0",
-    "tar": ">=4.4.2"
+    "node-sass": "^7.0.2",
+    "tar": ">=4.4.18",
+    "@snyk/protect": "latest"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "snyk": true
 }
